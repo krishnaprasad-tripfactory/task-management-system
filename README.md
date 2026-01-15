@@ -40,7 +40,6 @@ If the project is not already imported into IntelliJ:
 
 ```bash
 git clone https://github.com/krishnaprasad-tripfactory/task-management-system.git
-cd task-management-system
 ```
 
 Alternatively, you can **Import Project from VCS** directly in IntelliJ IDEA.
@@ -102,61 +101,4 @@ http://localhost:8080
 
 ---
 
-## 🔗 API Testing (cURL Examples)
 
-Below are sample `curl` commands for testing APIs on **macOS/Linux** and **Windows**.
-
-> Replace endpoint paths as per your controller mappings.
-
----
-
-### ▶️ Create a Task
-
-#### macOS / Linux
-```bash
-curl -X POST http://localhost:8080/tasks -H "Content-Type: application/json" -d '{
-  "name": "Sample Task",
-  "time": 5
-}'
-```
-
-#### Windows (PowerShell)
-```powershell
-curl -X POST http://localhost:8080/tasks ^
--H "Content-Type: application/json" ^
--d "{\"name\":\"Sample Task\",\"time\":5}"
-```
-
----
-
-### ▶️ Get Task Status
-
-#### macOS / Linux
-```bash
-curl http://localhost:8080/tasks/1
-```
-
-#### Windows (PowerShell)
-```powershell
-curl http://localhost:8080/tasks/1
-```
-
----
-
-## 📦 Git Workflow (IntelliJ)
-
-1. Make changes in IntelliJ
-2. Commit using **Git → Commit**
-3. Push using **Git → Push**
-
-No manual terminal Git commands are required when using IntelliJ IDEA.
-
----
-
-## ✅ Notes
-
-- Ensure port **8080** is free before running the application
-- Increase `task.workers` carefully to avoid thread exhaustion
-- Logs can be monitored from the IntelliJ Run Console
-
----
