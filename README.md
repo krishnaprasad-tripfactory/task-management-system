@@ -1,23 +1,39 @@
-## ⚙️ Setup Instructions
+# Task Management System
 
-### ✅ Prerequisites
-Make sure the following are installed on your system:
+A Spring Boot–based task management system designed to handle concurrent task execution using configurable worker threads.
+
+---
+
+## ⚙️ Setup & Installation Guide
+
+Follow the steps below to set up and run the application locally.
+
+---
+
+## ✅ Prerequisites
+
+Ensure the following tools are installed and available in your system path:
 
 - **Java 17**
   ```bash
   java -version
-````
+  ```
 
-* **Maven**
-
+- **Apache Maven**
   ```bash
   mvn -version
   ```
-* **Git**
+
+- **Git**
+  ```bash
+  git --version
+  ```
 
 ---
 
-### 📥 Clone the Repository
+## 📥 Clone the Repository
+
+Clone the repository and navigate to the project root:
 
 ```bash
 git clone https://github.com/krishnaprasad-tripfactory/task-management-system.git
@@ -26,22 +42,26 @@ cd task-management-system
 
 ---
 
-### ⚙️ Configure Worker Threads
+## ⚙️ Application Configuration
 
-Edit `application.yml` or `application.properties` to set the number of worker threads:
+Configure the number of worker threads responsible for concurrent task execution.
 
-#### application.yml
+### `application.yml`
 
 ```yaml
 task:
   workers: 3
 ```
 
-> This value controls how many tasks can run concurrently.
+> **Note:**  
+> The `task.workers` property determines how many tasks can be executed concurrently.  
+> Adjust this value based on system resources and workload requirements.
 
 ---
 
-### ▶️ Build the Project
+## 🛠️ Build the Application
+
+Compile the project and resolve dependencies using Maven:
 
 ```bash
 mvn clean install
@@ -49,7 +69,9 @@ mvn clean install
 
 ---
 
-### ▶️ Run the Application
+## ▶️ Run the Application
+
+Start the Spring Boot application using the following command:
 
 ```bash
 mvn spring-boot:run
@@ -57,15 +79,14 @@ mvn spring-boot:run
 
 ---
 
-### 🌍 Access the Application
+## 🌍 Application Access
 
-Once the application starts, it will be available at:
+Once the application starts successfully, it will be accessible at:
 
 ```
 http://localhost:8080
 ```
 
-Use **Postman** or **curl** to test the REST APIs.
+Use tools such as **Postman** or **curl** to interact with the REST APIs.
 
-```
-
+---
