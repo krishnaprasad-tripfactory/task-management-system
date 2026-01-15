@@ -99,5 +99,93 @@ http://localhost:8080
 ```
 
 ---
+### Controller Layer
+Exposes REST APIs:
+- `/queueTask`
+- `/checkStatus`
+- `/stopTask`
 
+The controller contains **no business logic** and delegates all processing to the service layer.
 
+---
+
+## 🌐 API Endpoints
+
+All endpoints accept and return **JSON**.
+
+---
+
+### ▶️ Queue Task
+
+**Endpoint**
+```
+POST /queueTask
+```
+
+**Request Body**
+```json
+{
+  "id": "task-123",
+  "task": "example-task",
+  "taskParams": {
+    "key": "value"
+  },
+  "time": 5
+}
+```
+
+**Response**
+```json
+{
+  "id": "task-123",
+  "status": "DONE"
+}
+```
+
+---
+
+### 🔍 Check Task Status
+
+**Endpoint**
+```
+POST /checkStatus
+```
+
+**Request Body**
+```json
+{
+  "id": "task-123"
+}
+```
+
+**Response**
+```json
+{
+  "id": "task-123",
+  "status": "QUEUED | RUNNING | DONE"
+}
+```
+
+---
+
+### ⛔ Stop Task
+
+**Endpoint**
+```
+POST /stopTask
+```
+
+**Request Body**
+```json
+{
+  "id": "task-123"
+}
+```
+
+**Response**
+```json
+{
+  "id": "task-123",
+  "status": "STOPPED"
+}
+```
