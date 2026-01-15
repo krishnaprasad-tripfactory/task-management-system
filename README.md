@@ -50,11 +50,10 @@ Alternatively, you can **Import Project from VCS** directly in IntelliJ IDEA.
 
 Configure the number of worker threads for concurrent task execution.
 
-### `application.yml`
+### `application.properties`
 
-```yaml
-task:
-  workers: 3
+```
+task.workers = 3
 ```
 
 > **Note:**  
